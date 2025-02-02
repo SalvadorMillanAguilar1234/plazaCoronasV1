@@ -1,0 +1,7 @@
+{
+  "name": "plazaCoronasV1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
