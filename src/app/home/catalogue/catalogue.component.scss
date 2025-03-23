@@ -1,0 +1,25 @@
+.bg-catalogue{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    // background: #713d3d;¿'
+    border-radius: 8px;
+  }
+  
+
+.tall {
+    height: 250px;
+  }
+  
+  .short {
+    height: 180px;
+  }

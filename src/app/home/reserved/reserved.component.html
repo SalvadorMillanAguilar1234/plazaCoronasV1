@@ -1,0 +1,37 @@
+<div class="bg-reservated">
+  <ion-row>
+    <ion-col>
+      <small>Últimas coronas apartadas</small>
+    </ion-col>
+    <ion-col style="text-align: right;">
+
+      <small class="view-more">Ver más ...</small>
+    </ion-col>
+  </ion-row>
+  <div class="card-container ">
+    <ion-card *ngFor="let item of listReserved" class="card-style">
+
+      <div class="style-id">
+        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+          # CP00001
+        </span>
+      </div>
+      <div class="style-stick">
+        <span style="position: absolute; top: 35%; left: 50%; transform: translate(-50%,-50%);">
+          <small style="font-size: 6px;">APARTADO</small>
+        </span>
+      </div>
+      <div class="style-size">
+        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+          CH
+        </span>
+      </div>
+      <div class="style-money">
+        <span class="money-font" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+          $ 400.00
+        </span>
+      </div>
+    </ion-card>
+
+  </div>
+</div>

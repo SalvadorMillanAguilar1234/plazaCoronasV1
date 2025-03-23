@@ -11,7 +11,8 @@ import { firebaseApp } from './firebase.config';
 (async () => {
   try {
     console.log('Inicializando Firebase...');
-    await firebaseApp; // Espera a que Firebase se configure antes de arrancar Angular
+    
+    await Promise.resolve(firebaseApp); // Asegura que Firebase se inicialice// Espera a que Firebase se configure antes de arrancar Angular
     console.log('Firebase inicializado correctamente.');
     bootstrapApplication(AppComponent, {
       providers: [

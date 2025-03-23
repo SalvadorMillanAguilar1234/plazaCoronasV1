@@ -1,0 +1,12 @@
+<div class="bg-catalogue">
+  <small>Catalogo</small>
+
+  <ion-row class="grid-container"> 
+    <ion-col size="12" class="grid-item"  *ngFor="let item of listaCatalogue; let i =  index">
+      <ion-card  [ngClass]="{'tall': i%2 == 0, 'short': i%2 !== 0}">
+hola
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</div>

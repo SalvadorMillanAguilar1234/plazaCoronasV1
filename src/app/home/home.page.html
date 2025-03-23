@@ -1,20 +1,60 @@
-<ion-header [translucent]="true">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Display</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" ios="person-circle-outline" md="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content>
+  <ion-list-header>Appearance</ion-list-header>
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-toggle id="mode" [(ngModel)]="paletteToggle" (ionChange)="toggleChange($event)" justify="space-between"
+        >Dark Mode</ion-toggle
+      >
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list [inset]="true">
+    <ion-item [button]="true">Text Size</ion-item>
+    <ion-item>
+      <ion-toggle justify="space-between">Bold Text</ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list-header>Brightness</ion-list-header>
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-range value="40">
+        <ion-icon name="sunny-outline" slot="start"></ion-icon>
+        <ion-icon name="sunny" slot="end"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-toggle justify="space-between" checked>True Tone</ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list [inset]="true">
+    <ion-item [button]="true">
+      <ion-label>Night Shift</ion-label>
+      <ion-text slot="end" color="medium">9:00 PM to 8:00 AM</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content> -->
+
+<ion-content>
+
+  <app-loading *ngIf="loading"></app-loading>
+  <app-nav-bar *ngIf="!loading"></app-nav-bar>
+  <app-category  *ngIf="!loading"></app-category>
+  <app-reserved  *ngIf="!loading"></app-reserved>
+  <app-catalogue></app-catalogue>
 </ion-content>
